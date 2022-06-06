@@ -135,3 +135,15 @@ XF86Audio{Raise,Lower}Volume
 
 XF86MonBrightness{Down,Up}
 	light {-U 5, -A 5}
+
+#
+# Custom application
+#
+
+super + shift + {b}
+	firefox
+
+
+# taking screenshot
+super + shift + p
+	flameshot gui -c -p ~/Pictures/ScreenShots/
