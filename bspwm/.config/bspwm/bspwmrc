@@ -4,16 +4,30 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Run the eww bar
-eww -c $HOME/.config/eww/mybar --restart open mybar &
+# eww -c $HOME/.config/eww/mybar --restart open mybar &
+
+# Run the polybar
+$HOME/.config/polybar/launch.sh
 
 # Run the picom
 # picom --config $HOME/.config/picom/picom.conf &
 
+# Run the Network Manager Applet
+nm-applet &
+
 # Run the power manager
 xfce4-power-manager &
 
-# Start some awesome wallpapers
-feh --randomize --no-fehbg --bg-fill ~/Pictures/Wallpapers/*
+# Run ibus
+ibus-daemon -drxR
+
+# Draw some awesome wallpapers
+
+# Some random wallpapers
+# feh --randomize --no-fehbg --bg-fill ~/Pictures/Wallpapers/*
+
+# My favourite
+feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/steve-harvey-U4wcrDteZ2Y-unsplash.png
 
 # Set the cursor to the right way
 xsetroot -cursor_name left_ptr
