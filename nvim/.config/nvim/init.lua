@@ -11,7 +11,10 @@ _/  |_|  |__   ____ |  | |  |   ____   ____
 --]]
 local skeleton_plugins = {
   'plugins',
-  'general'
+  'general',
+  'keymaps',
+  'completion',
+  'lsp'
 }
 
 for k, v in pairs(skeleton_plugins) do
