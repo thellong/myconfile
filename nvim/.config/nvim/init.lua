@@ -9,9 +9,14 @@ _/  |_|  |__   ____ |  | |  |   ____   ____
            \/     \/                /_____/  
 
 --]]
+local skeleton_plugins = {
+  'plugins',
+  'general'
+}
 
-require('plugins')
-require('general')
+for k, v in pairs(skeleton_plugins) do
+  require(v)
+end
 
 -- Load colorsheme
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
